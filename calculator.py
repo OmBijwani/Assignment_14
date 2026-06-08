@@ -1,24 +1,31 @@
-def add(a, b):
-    return a + b
+def calculator(a, b, oprn):
+    if oprn == 'Add':
+        return a + b
 
-def subtract(a, b):
-    return a -b
+    if oprn == 'Sub':
+        return a - b
 
-def multiply(a, b):
-    return a * b
+    if oprn == 'Multiply':
+        return a * b
 
-def divide(a, b):
-    return a / b
+    if oprn == 'Division':
+        return a / b
 
-def power(a, b):
-    pass
+    if oprn == 'Power':
+        pass
 
-def modulus(a, b):
-    pass
+a = int(input("Enter A: "))
+b = int(input("Enter B: "))
 
-def floor_division(a, b):
-    pass
+print("""Available Operations: 
+Add 
+Sub 
+Multiply
+Division
+Power""")
 
+oprn = input("Enter Operation: ")
 
-if __name__ == "__main__":
-    print("Calculator Application")
+result = calculator(a, b, oprn)
+
+print("RESULT:", result)
